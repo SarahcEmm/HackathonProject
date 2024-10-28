@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* height and font for body and html */
+body {
+    height: 100%;
+    font-family: Manrope, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff7000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    color: white; 
+}
+
+header a {
+    text-decoration: none; 
+    color: white; 
+}
+
+#logo {
+    font-size: 1.5em; 
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#menu li {
+    padding: 10px 0;
+}
+
+#menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+#menu li a:hover {
+    text-decoration: underline;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        right: 20px; 
+        top: 10px; 
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ff7000; 
+        width: 100%;
+    }
+    
+    #nav-toggle:checked + .nav-toggle-label + nav #menu {
+        display: flex;
+    }
+    
+    #menu li {
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid white;
+    }
+
+    #menu li a {
+        font-size: 1.2em;
+    }
+}
+
+/* To make all the elements central to the page */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #35a6fd7f;
+    padding: 80px 10px 10px 10px;
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+p {
+    max-width: 600px;
+}
+
+li {
+    display: list-item;
+}
+
+#teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.member {
+    padding: 5px 10px 5px 10px;
+}
+
+.member a {
+    font-size: x-large;
+    padding: 0 5px 0 5px;
+    color: white;
+}
+
+footer {
+    background-color: #ff7000;
+    color: white;
+    margin-top: auto;
+    padding: 1px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+.social-link {
+    color: white;
+    font-size: xx-large;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 10px;
+}

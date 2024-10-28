@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* height and font for body and html */
+html,
+body {
+    height: 100%;
+    font-family: Manrope, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff7000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#menu li {
+    padding: 10px 0;
+}
+
+#menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+#menu li a:hover {
+    text-decoration: underline;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color:#ff7000;
+        width: 100%;
+    }
+
+    #nav-toggle:checked+.nav-toggle-label+nav #menu {
+        display: flex;
+    }
+
+    #menu li {
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid white;
+    }
+
+    #menu li a {
+        font-size: 1.2em;
+    }
+}
+
+/* To make all the elements central to the page */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/Designer (5).jpg');
+    background-size: cover center;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    background-position: center;
+}
+/* background image for the animal html */
+.bck-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/Designer (15).jpeg');
+    background-size: cover center;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    background-position: center;
+}
+
+.heading-container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffc89d;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 30px;
+    max-width: 80%;
+    text-align: center;
+    font-size: 1em;
+}
+
+.heading-container1 {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffc89d;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 30px;
+    max-width: 80%;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* audio styling */
+.audio-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Style for the audio button */
+#audio-button {
+    background-color: #0383e6;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+#audio-button:hover {
+    background-color: #096cb8
+}
+
+
+/* make image stay central */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60vh;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    padding: 50px;
+}
+
+/* styling for the speech bubble contents*/
+.speech-bubb {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    width: fit-content;
+    max-width: 90%;
+}
+
+/* added a triangle part for the speech bubble */
+.speech-bubb::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    /* Position below the speech bubble */
+    left: 50%;
+    /* Centered horizontally */
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+    /* Triangle pointing up */
+}
+
+.resp-image {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .resp-image {
+        max-width: 50%;
+    }
+}
+
+/* quiz page css */
+#question {
+    margin: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.answer {
+    background-color: #ffc89d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #000;
+    width: 200px;
+    text-align: center;
+}
+
+.answer:hover {
+    background-color: #ff7000;
+}
+
+/* glow effect for answer correct button*/
+.correct-answer {
+
+    animation: glow 0.5s ease-in-out;
+
+}
+
+
+
+@keyframes glow {
+
+    0% {
+
+        background-color: #ff7000;
+
+    }
+
+    100% {
+
+        background-color: #ff7000;
+
+    }
+
+}
+
+
+
+.incorrect-answer {
+
+    animation: shake 0.5s;
+
+}
+
+
+
+@keyframes shake {
+
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+
+}
+
+
+
+#next {
+    background-color: #096cb8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#next:hover {
+    background-color: #f1c9af;
+}
+
+/* Feedback and speech bubble */
+#feedback-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.speech-bubble {
+    position: relative;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    max-width: 90%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.speech-bubble.correct {
+    background-color: #4caf50;
+    color: white;
+}
+
+.speech-bubble.incorrect {
+    background-color: #f44336;
+    color: white;
+}
+
+
+
+.speaker-img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Score display */
+#score {
+    font-size: 1.5em;
+    margin: 20px;
+    text-align: center;
+}
